@@ -121,3 +121,11 @@ m1$setInv()
 ## Calling getInv() returns the pre-computed matrix
 ##
 m1$getInv()
+
+##TEST 8
+## test inverse matrix by multiplying the original matrix to make sure you get the 
+## identity matrix
+##
+mat1 %*% m1$getInv()
+mat1 %*% cacheSolve(m1)
+
